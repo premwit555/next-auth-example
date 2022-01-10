@@ -421,16 +421,22 @@ function Layuot1() {
           <Member>
                <Row>
                     <Col span={10} offset={1}>
-                         <Row >
+                         <Row>
                               <Table
                                    scroll={{
-                                        y: 300,
+                                        y: 250,
                                    }}
                                    columns={columns}
                                    dataSource={data}
                                    size='small'
                                    bordered
                                    title={() => "รายการฝาก"}
+                                   pagination={{
+                                        responsive:true,
+                                        simple:true,
+                                        defaultPageSize:999
+                                        
+                                   }}
                               />
                          </Row>
                          <Row>
@@ -458,7 +464,12 @@ function Layuot1() {
                               columns={columns}
                               dataSource={data}
                               size='small'
-                              pagination={<Pagination disabled />}
+                              pagination={{
+                                   responsive:true,
+                                   simple:true,
+                                   defaultPageSize:999
+                                   
+                              }}
                          />
                     </Col>
                </Row>
